@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+
+
+<frameset cols="30%,30%,40%">
+  <frame src="frame_a.htm">
+  
+</frameset>
+
+</html>
