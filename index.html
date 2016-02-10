@@ -175,7 +175,7 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-         var data = google.visualization.arrayToDataTable(getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data));
+         var data =  <%= request.getParameter("(getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data));"%>
          <script>
 	$(document).ready(function(){
        
