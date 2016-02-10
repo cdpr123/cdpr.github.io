@@ -175,30 +175,15 @@
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
-         var data = google.visualization.arrayToDataTable([
-          ['Prodid', 'Num Sold']
+         var data = google.visualization.arrayToDataTable(getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data));
          <script>
 	$(document).ready(function(){
-    	$("button").click(function(){
-        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
-           
-                $("div").append(data.field1 + " ");
+       
+                $("chart_div").append(data.field1 + " ");
             
         });
     });
-});
-</script>
-<body>
 
-<button>Get JSON data</button>
-
-<div></div>
-
-</body>
-</html>
-
-
-        ]);
         var options = {
           title: 'Level Of Trash Bin : '
         };
