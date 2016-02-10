@@ -168,7 +168,40 @@
 				</div>
 			</div>-->
 	
-    
+    <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+         var data = google.visualization.arrayToDataTable([
+          ['Prodid', 'Num Sold']
+         <script>
+	$(document).ready(function(){
+    	$("button").click(function(){
+        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
+           
+                $("div").append(data.field1 + " ");
+            
+        });
+    });
+});
+</script>
+
+        ]);
+        var options = {
+          title: 'Level Of Trash Bin : '
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
 	<br><br><br><br>
 	<br><br><br><br>
 	<br><br><br><br>
