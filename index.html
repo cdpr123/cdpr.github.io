@@ -154,7 +154,7 @@
 		<br><br><br><br>
 		<br><br><br><br>
 									
-		<!-- <section class="success" id="pie">
+		 <section class="success" id="pie">
 		<div class="container">
                 <div class="row">
                         <h3>Trash Bin Level :</h3>
@@ -166,30 +166,8 @@
 					<br>
 					<h5>65% Full</h5>
 				</div>
-			</div>-->
+			</div>
 	
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
-           
-                $("div").append(data.field1 + " ");
-            
-        });
-    });
-});
-</script>
-</head>
-<body>
-
-<button>Get JSON data</button>
-
-<div></div>
-
-</body>
 
 	<br><br><br><br>
 	<br><br><br><br>
