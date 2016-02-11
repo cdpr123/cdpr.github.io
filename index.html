@@ -169,33 +169,29 @@
 			</div>-->
 	
     <html>
-  <head>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-         var data =  <%= request.getParameter("(getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data));"%>
-         <script>
-	$(document).ready(function(){
-       
-                $("chart_div").append(data.field1 + " ");
-            
-        });
-    });
+<body>
 
-        var options = {
-          title: 'Level Of Trash Bin : '
-        };
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
-  </head>
-  <body>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-  </body>
+<form id="frm1" action="form_action.asp">
+<button id="btn1" name="subject" type="submit" value="fav_HTML">HTML</button>
+<button id="btn2" name="subject" type="submit" value="fav_CSS">CSS</button>
+</form>
+
+<p>Click the "Try it" button to return the value of the "HTML" button:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("btn1").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
 </html>
+
 	<br><br><br><br>
 	<br><br><br><br>
 	<br><br><br><br>
