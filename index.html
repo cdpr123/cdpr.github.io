@@ -168,36 +168,26 @@
 				</div>
 			</div>-->
 	
-    <html>
-<body>
-<div id="doughnutChart" class="chart"></div>
-<form id="frm1" action="doughnut.html">
-<button id="btn1" type="submit">Level</button>
-
-</form>
-
-<p>Click the "Try it" button to return the value of the "HTML" button:</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    $("btn1").click(function(){
+    $("button").click(function(){
         $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
            
-                $("btn1").append(data.field1 + " ");
+                $("div").append(data.field1 + " ");
             
         });
     });
 });
-
-function myFunction() {
-    var x = document.getElementById("btn1");
-    document.getElementById("demo").innerHTML = x;
-}
 </script>
+</head>
+<body>
+
+<button>Get JSON data</button>
+
+<div></div>
 
 </body>
 </html>
