@@ -171,9 +171,9 @@
     <html>
 <body>
 
-<form id="frm1" action="form_action.asp">
-<button id="btn1" name="subject" type="submit" value="fav_HTML">HTML</button>
-<button id="btn2" name="subject" type="submit" value="fav_CSS">CSS</button>
+<form id="frm1" action="pie.js">
+<button id="btn1" type="submit" value="pie.js">Level</button>
+
 </form>
 
 <p>Click the "Try it" button to return the value of the "HTML" button:</p>
@@ -184,7 +184,7 @@
 
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
+    $("btn1").click(function(){
         $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
            
                 $("btn1").append(data.field1 + " ");
