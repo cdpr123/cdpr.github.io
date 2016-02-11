@@ -183,6 +183,16 @@
 <p id="demo"></p>
 
 <script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
+           
+                $("btn1").append(data.field1 + " ");
+            
+        });
+    });
+});
+
 function myFunction() {
     var x = document.getElementById("btn1").value;
     document.getElementById("demo").innerHTML = x;
