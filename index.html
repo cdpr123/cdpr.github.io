@@ -93,7 +93,7 @@
                     <hr class="star-primary">
                 </div>
             
-        	
+        	<div class="col-lg-12 col-lg-offset-2">
 		<h3>Select area from the list :</h3>                
 		<div class="dropdown">
 		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Area
@@ -107,7 +107,10 @@
 		</ul>
 		</div>
 	</div>
-	
+	</div>
+  <div class="col-lg-12 col-lg-offset-8">
+	<img src="img/location.jpg" alt="TrashImg" style="width:350px;height:250px;">
+	</div>
 	<br><br><br><br>	
 	<br><br><br><br>
 	<br><br><br><br>
@@ -116,86 +119,31 @@
 	<br><br><br><br>
 		<div class="row">		
 		<section id="trashBin">
-		   
+		 <div class="col-lg-12 col-lg-offset-2">
 		<h3>Trash Bin in this Area : </h3>
         	<div class="dropdown">
 			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Trash Bin ID
 			<span class="caret"></span></button>
 			<ul class="dropdown-menu">
-				<li><a href="#piechart">Trash Bin 1</a></li>
-				<li><a href="#piechart">Trash Bin 2</a></li>
-				<li><a href="#piechart">Trash Bin 3</a></li>
+				<li><a href="piechart.html">Trash Bin 1</a></li>
+				<li><a href="piechart.html">Trash Bin 2</a></li>
+				<li><a href="piechart.html">Trash Bin 3</a></li>
 			</ul>
 		</div>
-	
+		</div>
+	 <div class="col-lg-12 col-lg-offset-8">
+	<img src="img/trash.jpg" alt="TrashImg" style="width:350px;height:250px;">
+	</div>
 		</section>
 		
-		<div class="row">		
-		<section id="piechart">
-		<h3>Level Of Garbage</h3>
-    <head>
-    <title></title>
-
-    <!-- Ignite UI Required Combined CSS Files -->
-    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/structure/infragistics.css" rel="stylesheet" />
-
-    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-
-    <!-- Ignite UI Required Combined JavaScript Files -->
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.core.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.dv.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.lob.js"></script>
-</head>
-<body>
-   <style type="text/css">
-         #chart {
-            position: relative;
-            float: left;
-            margin-right: 10px;
-            margin-bottom: 10px;
-    }
-    </style>
-
-    <div id="piechart"></div>
-    <script>
-	$(document).ready(function(){
-        $("button").click(function(){
-        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
-           
-                $("div").append(data.field1 + " ");
-				$data1=data.field1;
-				var data = [
-                { "CountryName": "Filled", "Pop1990": 1141, "Pop2008":data.field1*10, "Pop2025": 1458 },
-                { "CountryName": "Remaining", "Pop1990": 849, "Pop2008": 1000-data.field1*10, "Pop2025": 1398 },
-            ];
-
-            $("#chart").igPieChart({
-                width: "435px",
-                height: "435px",
-                dataSource: data, //JSON data defined above
-                valueMemberPath: "Pop2008",
-                labelMemberPath: "CountryName",
-                labelsPosition: "bestFit"
-            });
-            
-        });
-    });
-});
-
-        $(function () {
-        });
-    </script>
-<button>Level</button>
-</body>
-
-		</section>
+		
 		
 		<br><br><br><br>
 		<br><br><br><br>
 		<br><br><br><br>
+		
+		
+		
 		<br><br><br><br>	
 		<br><br><br><br>
 		<br><br><br><br>
@@ -203,6 +151,7 @@
 	
 		
 		<div class="row">
+		<div class="col-lg-12 col-lg-offset-2">
 		<section id="driver">
 		<h3>Driver Available in this Area : </h3>
                 <div class="dropdown">
@@ -215,10 +164,8 @@
 		</ul>
 		</div>
 		</div>
+		</div>
 		
-		<br><br><br><br>
-		<br><br><br><br>
-		<br><br><br><br>
 									
 	
 	
