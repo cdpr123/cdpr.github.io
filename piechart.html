@@ -113,7 +113,7 @@
     $("button").click(function(){
         $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
            
-                $("div").append(data.field1 + " ");
+           //     $("div").append(data.field1 + " ");
 				$data1=data.field1;
 				var data = [
                 { "CountryName": "Filled", "Pop1990": 1141, "Pop2008":data.field1*10, "Pop2025": 1458 },
