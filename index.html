@@ -135,9 +135,9 @@
 			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Trash Bin ID
 				<span class="caret"></span></button>
 			<ul class="dropdown-menu">
-				<li><a href="#chart">Trash Bin 1</a></li>
-				<li><a href="#chart">Trash Bin 2</a></li>
-				<li><a href="#chart">Trash Bin 3</a></li>
+				<li><a href="/cdpr123/piechart.html">Trash Bin 1</a></li>
+				<li><a href="piechart.html">Trash Bin 2</a></li>
+				<li><a href="piechart.html">Trash Bin 3</a></li>
 			</ul>
 		</div>
 		</div>
@@ -155,83 +155,7 @@
 	<br><br><br><br>
 	<br><br><br><br>
 	
-	<section id="chart">
-	<div class="container">
-	     <div class="row">
-	          <div class="col-lg-12 col-lg-offset-2">
-			<h3>Level of Trashbin is : </h3>
-		  </div>
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
 
-    <!-- Ignite UI Required Combined CSS Files -->
-    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
-    <link href="http://cdn-na.infragistics.com/igniteui/2015.2/latest/css/structure/infragistics.css" rel="stylesheet" />
-
-    <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.8.3.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-
-    <!-- Ignite UI Required Combined JavaScript Files -->
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.core.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.dv.js"></script>
-    <script src="http://cdn-na.infragistics.com/igniteui/2015.2/latest/js/infragistics.lob.js"></script>
-
-</head>
-<div class="col-lg-12 col-lg-offset-2">
-<button class="btn btn-primary dropdown-toggle" type="button">Display Level</button>
-<button class="btn btn-primary dropdown-toggle" type="button"><a href="#driver">Select Driver</a></div>	 
-
-<body>
-    
-    <style type="text/css">
-         #chart {
-            position: relative;
-            float: left;
-            margin-right: 10px;
-            margin-bottom: 10px;
-    }
-        
-    </style>
-    <div id="chart"></div>
-    <SCRIPT LANGUAGE="Javascript">
-     <script>
-	$(document).ready(function(){
-        $("button").click(function(){
-        $.getJSON('http://api.thingspeak.com/channels/79448/feed/last.json?callback=?', function(data){
-           
-                $("div").append(data.field1 + " ");
-				$data1=data.field1;
-				var data = [
-                { "CountryName": "Filled", "Pop1990": 1141, "Pop2008":data.field1*10, "Pop2025": 1458 },
-                { "CountryName": "Remaining", "Pop1990": 849, "Pop2008": 1000-data.field1*10, "Pop2025": 1398 },
-
-            ];
-
-            $("#chart").igPieChart({
-                width: "435px",
-                height: "435px",
-                dataSource: data, //JSON data defined above
-                valueMemberPath: "Pop2008",
-                labelMemberPath: "CountryName",
-                labelsPosition: "bestFit"
-            });
-        });
-    });
-});
-        $(function () {
-        });
-		
-    </script>
- </body>
-</html>
-
-	</div>
-	</div>
-	</div>
-	</section>
 		<br><br><br><br>
 		<br><br><br><br>
 		<br><br><br><br>
