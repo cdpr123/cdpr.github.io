@@ -96,8 +96,7 @@
 </head>
 <body>
    <button class="btn btn-primary dropdown-toggle" type="button">Display Level</button>
-    <button class="btn btn-primary dropdown-toggle" type="button">Send SMS
-	  <a href="cdpr123.github.io/send_sms.html"></a>
+    <button class="btn btn-primary dropdown-toggle" type="button"><a href="#send_sms">Send SMS</a>
 	 </button>
 	<br><br>
     <style type="text/css">
@@ -145,10 +144,58 @@
 </div>
 </div>
 </div>
-
 	<br><br><br><br>
 	
+	<section id="send_sms">
+	<div class="container ">
+            <div class="row">
+               	<div class="col-lg-12 col-lg-offset-2 wow pulse animated">
+               		
+        <?php
+	$username="dm.personaldocs@gmail.com";
+	$hash = "6e1575441a705091f08092adca1744cab6df0d8c";
+
+
+$numbers=$_POST['numberext'].$_POST['number'];
+$sender = urlencode('TXTLCL');
+$message=rawurlencode($_POST['message']);
+
+$data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+
+if($_POST['submitted']=="true")
+{
+	$ch = curl_init('http://api.textlocal.in/send/');
+    	curl_setopt($ch, CURLOPT_POST, true);
+    	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    	$response = curl_exec($ch);
+    	curl_close($ch);
+    	
+    	// Process your response here
+    	echo $response;
 	
+}
+
+?>
+<form action="sendsms.php"  method="POST">
+		Number: <br />
+		<input type="text" size=2 name="numberext"> - <input type="text" name="number">
+		<br /><br />
+		
+		Sender: <br />
+		<input type="text"  name="from">
+		
+		<br /> <br />
+		
+		Message: <br />
+		<textarea name="message"> </textarea>
+		 <br />
+		<input type="hidden" name="submitted" value="true">
+		<input type="submit" name="submit" value="Send">
+		
+</form>
+</body>
+</section>	
 	<br><br><br><br>
 	<br><br><br><br>
  <section class="success" id="about">
@@ -174,7 +221,7 @@
             		</div>
 		</div>
     </section>
-</html>
+
   <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -226,3 +273,4 @@
             </div>
         </div>
     </section>
+</html>
